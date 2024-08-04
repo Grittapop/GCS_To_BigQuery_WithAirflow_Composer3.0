@@ -2,10 +2,22 @@ resource "google_bigquery_dataset" "dataset" {
   dataset_id                  = "workshop"
   location                    = "asia-southeast1"
   default_table_expiration_ms = 3600000
+  
+  labels = {
+    env = "default"
+  }
+}
+
+
+resource "google_bigquery_table" "table" {
+  dataset_id = google_bigquery_dataset.dataset.dataset_id
+  table_id   = "transaction"
+  deletion_protection = false
 
   labels = {
     env = "default"
   }
+  
 }
 
 
@@ -23,7 +35,6 @@ resource "google_composer_environment" "composer" {
       }
     }
       
-
     workloads_config {
         scheduler {
           cpu        = 0.5

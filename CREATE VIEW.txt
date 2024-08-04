@@ -1,0 +1,14 @@
+CREATE VIEW `workshop-430006.workshop.transaction_view`
+AS
+SELECT
+  TIMESTAMP_MICROS(CAST(date / 1000 AS INT64)) AS date_converted
+  ,thb_amount
+  ,transaction_id
+  ,product_id
+  ,product_name
+  ,quantity
+  ,customer_id
+  ,customer_name
+  ,customer_country
+FROM `workshop-430006.workshop.transaction`
+WHERE total_amount > 0;
