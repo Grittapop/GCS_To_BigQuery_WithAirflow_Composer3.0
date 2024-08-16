@@ -63,18 +63,18 @@ To ensure that services like Terraform can work correctly in Google Cloud, you n
 
 
 ## Terraform Deployment
-### 1. Initialize Terraform:
+### Initialize Terraform:
 
 ```yaml
 terraform init
 ```
 
-### 2. Plan the infrastructure:
+### Plan the infrastructure:
 
 ```yaml
 terraform plan
 ```
-### 3. Apply the configuration:
+### Apply the configuration:
 
 ```yaml
 terraform apply
@@ -82,18 +82,18 @@ terraform apply
 
 
 ## DAG Configuration
-### 1. Upload DAG to Cloud Composer:
+### Upload DAG to Cloud Composer:
 - Upload the **dag_bq_load.py** script to your Cloud Composer environment.
 
-### 2. Configure BigQuery View:
+### Configure BigQuery View:
 - Use the SQL script in **CREATE VIEW.txt** to create necessary view in BigQuery.
 
 
 ## Running the Pipeline
-### 1. Trigger the DAG:
+### Trigger the DAG:
 - Start the DAG via the Cloud Composer interface or trigger it manually using the Airflow UI.
 
-### 2. Monitor the Pipeline:
+### Monitor the Pipeline:
 - Monitor the progress and status of the pipeline using the Cloud Composer dashboard or Airflow UI.
 
   ![Screenshot 2024-08-04 125127](https://github.com/user-attachments/assets/3b9aecd0-c182-41b2-ab96-21b81702cf68)
