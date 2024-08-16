@@ -106,3 +106,7 @@ Once the data is available in **BigQuery**, connect it to **Looker Studio** and 
 ![Screenshot 2024-08-05 010417](https://github.com/user-attachments/assets/7db93d88-5434-418c-a0e2-ed686d5b3b34)
 
 ![Screenshot 2024-08-05 010314](https://github.com/user-attachments/assets/0aa4c83e-5d2e-4dfb-9de4-bb2f7a5759c7)
+
+
+## References
+- [Terraform Documentation](https://developer.hashicorp.com/terraform/docs)
